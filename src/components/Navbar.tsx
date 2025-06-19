@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/img/logo.svg';
 
 interface NavbarProps {
     handleCategoryChange: (category: string) => void;
@@ -22,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({
     return (
         <div className="flex justify-between items-center mt-3 flex-wrap gap-4 bg-gray-800 py-2 px-6 rounded-xl">
 
-            <img src="public/img/logo.svg" alt="logo" className='max-w-[100px]' />
+            <img src={logo} alt="logo" className='max-w-[100px]' />
             <div className="flex gap-4 justify-center my-4 flex-wrap">
                 {categories.map((cat) => (
                     <button
